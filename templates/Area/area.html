@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>BLOGS</title>
+    <title>Title</title>
     <link rel="stylesheet" href="{%static 'blog/style.css'%}">
 </head>
 <body>
@@ -22,19 +22,19 @@
 
 
 
-<button><a href="http://127.0.0.1:8000/home3/create/"> create Blog</a></button>
-{% for blog in blogs %}
+<button><a href="http://127.0.0.1:8000/home3/cArea/"> create</a></button>
+{% for area in areas %}
 
 <div class="blog-wrapper">
   <div class="blog-card">
     <div class="card-img"><img>
-      <h2>{{blog.title}}</h2>
+      <h2>{{area.name}}</h2>
     </div>
     <div class="card-details"><span><i class="fa fa-calendar"></i></span><span><i class="fa fa-heart"></i></span></div>
-    <div class="card-text"><p>{{blog.body}}</p></div>
-    <div class="read-more"><a href="http://127.0.0.1:8000/home3/up/{{blog.pk}}">Обновить</a>
+    <div class="card-text"><p>{{area.about}}</p></div>
+    <div class="read-more"><a href="http://127.0.0.1:8000/home3/upArea/{{area.pk}}">Обновить</a>
     </div>
-    <div class="read-more"><a href="http://127.0.0.1:8000/home3/delete/{{blog.pk}}">Удалить</a>
+    <div class="read-more"><a href="http://127.0.0.1:8000/home3/dArea/{{area.pk}}">Удалить</a>
     </div>
   </div>
 </div>
@@ -44,18 +44,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

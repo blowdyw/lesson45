@@ -1,9 +1,11 @@
 
 from django.urls import path
-from .views import home2
+from .views import *
 
 urlpatterns = [
 
-    path('in2/', home2, name='home2')
 
+    path('region/', region_show),
+    path('about/', about_show),
+    path('cRegion/', createRegion)
 ]
